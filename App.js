@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableHighlight, Button } from 'react-native';
 
 export default function App() {
     console.log("App executed")
@@ -10,10 +10,7 @@ export default function App() {
     return (
         <View style={styles.container}>
             <Text numberOfLines={3} onPress={handlePress}>Hello React Native A really long text. NOw i wanna make this even more more long text</Text>
-            <TouchableHighlight onPress={() => console.log("image tapped")}>
-                <Image fadeDuration={1000} blurRadius={2} source={{width:200, height:300, uri: "https://picsum.photos/200/300"}}/>
-            </TouchableHighlight>
-            
+            <Button color="orange" title="click me" onPress={()=> console.log("button clicked")}></Button>
             <StatusBar style="auto" />
         </View>
     );
