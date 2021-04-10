@@ -8,7 +8,7 @@ export default function App() {
     const handlePress = () => console.log("Text pressed")
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, containerStyle]}>
             <Text numberOfLines={3} onPress={handlePress}>Hello React Native A really long text. NOw i wanna make this even more more long text</Text>
             <Button color="orange" title="click me" onPress={()=> console.log("button clicked")}></Button>
             <Button 
@@ -27,6 +27,8 @@ export default function App() {
         </View>
     );
 }
+
+const containerStyle = { backgroundColor: "orange"}
 
 const styles = StyleSheet.create({
     container: {
