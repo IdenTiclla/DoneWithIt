@@ -29,15 +29,27 @@ export default function App() {
     const handlePress = () => console.log("Text pressed")
 
     return (
-        <SafeAreaView style={[styles.container, containerStyle]}>
+        <View style={{
+            backgroundColor: "dodgerblue",
+            flex: 1
+        }}>
             <View style={{
-                backgroundColor:'dodgerblue',
-                width: "100%",
-                height: landscape ? "100%" : "30%",
-            }}>
-                
-            </View>
-        </SafeAreaView>
+                backgroundColor: "dodgerblue",
+                flex:1,
+            }}/>
+
+            <View style={{
+                backgroundColor: "gold",
+                flex:1,
+            }}/>
+
+
+            <View style={{
+                backgroundColor: "tomato",
+                flex:1,
+            }}/>
+
+        </View>
     );
 }
 
