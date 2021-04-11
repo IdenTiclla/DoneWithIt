@@ -15,9 +15,16 @@ import {
     Platform 
 } from 'react-native';
 
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks'
+
 export default function App() {
-    console.log("App executed")
-    console.log(Dimensions.get("screen"))
+    console.log(useDeviceOrientation())
+
+    const orientation = useDeviceOrientation()
+    const { landscape, portrait } = useDeviceOrientation()
+
+    console.log(landscape, portrait)
+
     
     const handlePress = () => console.log("Text pressed")
 
@@ -25,23 +32,10 @@ export default function App() {
         <SafeAreaView style={[styles.container, containerStyle]}>
             <View style={{
                 backgroundColor:'dodgerblue',
-                width:'50%',
-                height:500
+                width: "100%",
+                height: landscape ? "100%" : "30%",
             }}>
-                <Text numberOfLines={3} onPress={handlePress}>Hello React Native A really long text. NOw i wanna make this even more more long text</Text>
-                <Button color="orange" title="click me" onPress={()=> console.log("button clicked")}></Button>
-                <Button 
-                    color="blue" 
-                    title="click me" 
-                    onPress={()=> Alert.alert("My title", "My Message",[
-                        {text:"YEES!", onPress: () => console.log("clickeaste yeees")},
-                        {text:"NOOO!", onPress: () => console.log("clickeaste nooo")},
-                    ])}></Button>
-
-                <Button 
-                    color="red" 
-                    title="click me prompt" 
-                    onPress={()=> Alert.prompt("My Title", "my message", (text) => console.log(text))}></Button>
+                
             </View>
         </SafeAreaView>
     );
