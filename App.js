@@ -32,13 +32,16 @@ export default function App() {
         <View style={{
             paddingTop: StatusBar.currentHeight,
             flex: 1,
-            flexDirection: "row"
+            flexDirection: "row", // horizontal
+            justifyContent: "center", // main
+            alignItems: "center"
             
         }}>
             <View style={{
                 backgroundColor: "dodgerblue",
                 width: 100,
-                height: 100
+                height: 300,
+                alignSelf: "flex-start"
             }}>
                 <Text>Hello world</Text>
             </View>
@@ -46,7 +49,7 @@ export default function App() {
             <View style={{
                 backgroundColor: "gold",
                 width: 100,
-                height: 100
+                height: 200
             }}>
                 <Text>Hello world</Text>
             </View>
