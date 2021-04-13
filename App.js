@@ -35,15 +35,14 @@ export default function App() {
             flexDirection: "row", // horizontal
             justifyContent: "center", // main
             alignItems: "center",
-            alignContent: "center",
-            flexWrap: "wrap"
+            
             
         }}>
             <View style={{
                 backgroundColor: "dodgerblue",
                 width: 100,
-                height: 300,
-                alignSelf: "center"
+                flex: -1,
+                height: 100,
             }}>
                 <Text>Hello world</Text>
             </View>
@@ -51,7 +50,10 @@ export default function App() {
             <View style={{
                 backgroundColor: "gold",
                 width: 100,
-                height: 100
+                height: 100,
+                top: 20,
+                left: 20,
+                position: "absolute"
             }}>
                 <Text>Hello world</Text>
             </View>
@@ -59,22 +61,6 @@ export default function App() {
 
             <View style={{
                 backgroundColor: "tomato",
-                width: 100,
-                height: 100
-            }}>
-                <Text>Hello world</Text>
-            </View>
-
-            <View style={{
-                backgroundColor: "grey",
-                width: 100,
-                height: 100
-            }}>
-                <Text>Hello world</Text>
-            </View>
-
-            <View style={{
-                backgroundColor: "greenyellow",
                 width: 100,
                 height: 100
             }}>
